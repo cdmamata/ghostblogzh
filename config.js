@@ -22,6 +22,7 @@ config = {
         },
 		*/
         // 配置MySQL 数据库
+		/*
         database: {
             client: 'mysql',
             connection: {
@@ -33,10 +34,22 @@ config = {
             },
             debug: false
         },
+		*/
+		database: {
+            client: 'postgres',
+            connection: {
+                host     : 'ec2-54-204-20-209.compute-1.amazonaws.com',
+				port     : '5432',
+                user     : 'mtrlvowskbsnax',
+                password : 'Qze5IkS-6YhnACNL3aipyky8tq',
+                database : 'd5i55f1srd21it',
+                charset  : 'utf8'
+            }
+        },
 
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            host: '127.0.0.1',
+            host: '0.0.0.0',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: '2368'
         },
@@ -117,7 +130,7 @@ config = {
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
-            host: '127.0.0.1',
+            host: '0.0.0.0',
             // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
             port: '2368'
         },
